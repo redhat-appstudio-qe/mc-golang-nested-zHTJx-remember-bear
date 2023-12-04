@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: componentb-devfile-sample-go-basic-private-devfile-nested-8rmo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: componentb-devfile-sample-go-basic-private-devfile-nested-8rmo
+    app.kubernetes.io/part-of: mc-golang-nested
+  name: componentb-devfile-samplerazs
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: componentb-devfile-sample-go-basic-private-devfile-nested-8rmo
+    weight: null
+status: {}
